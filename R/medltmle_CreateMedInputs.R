@@ -60,13 +60,13 @@ CreateMedInputs <- function(data, Anodes, Cnodes, Lnodes, Ynodes, Inodes, Znodes
 
     }
 
-  if (!(is.null(regimes) || dim(regimes) != 3)) {
+  if (!(is.null(regimes) || length(dim(regimes)) == 3)) {
 
     stop("regimes must be an array with 3 dimensions (unless Anodes is NULL, in which case regimes can be NULL)")
 
     }
 
-  if (!(is.null(regimes.prime) || dim(regimes.prime) != 3)) {
+  if (!(is.null(regimes.prime) || length(dim(regimes.prime)) == 3)) {
 
     stop("regimes.prime must be an array with 3 dimensions (unless Anodes is NULL, in which case regimes can be NULL)")
 
