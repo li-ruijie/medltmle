@@ -108,7 +108,7 @@ medltmle(
 \item{YisL}{Logical indicating whether Y is a function of time-varying covariate.}
 }
 \value{
-Returns estimate of \eqn{E[Y_{\tau}(a, \overline{\Gamma}^{a^'})]}
+Returns estimate of \eqn{E[Y_{\tau}(a, \overline{\Gamma}^{a^\prime})]}
 }
 \description{
 Estimates parameters for longitudinal mediation analysis with time-varying mediators.

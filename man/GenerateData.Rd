@@ -20,5 +20,5 @@ Returns a dataframe with simulated covariates as described in the description.
 }
 \description{
 Simulate longitudinal data as specified in the description. Note that the data is of the following format:
-O={W1 W2 C1 A1 LA1 Z1 LZ1 Y1 C2 A2 LA2 Z2 LZ2 Y2 ... }
+O=\{W1 W2 C1 A1 LA1 Z1 LZ1 Y1 C2 A2 LA2 Z2 LZ2 Y2 ... \}
 }
