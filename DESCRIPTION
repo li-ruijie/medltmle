@@ -23,7 +23,8 @@ Suggests:
     testthat,
     caret,
     knitr,
-    Matrix
+    Matrix,
+    rmarkdown
 License: MIT + file LICENSE
 URL: https://github.com/podTockom/medltmle
 BugReports: https://github.com/podTockom/medltmle/issues
