@@ -3,6 +3,32 @@
 ################################
 
 ################################
+# Mode()
+################################
+
+Mode <- function(x, na.rm = FALSE) {
+  if (na.rm) x <- x[!is.na(x)]
+  ux <- unique(x)
+  ux[which.max(tabulate(match(x, ux)))]
+}
+
+################################
+# sub2ind()
+################################
+
+sub2ind <- function(r, col, num.rows) {
+  r + (col - 1L) * num.rows
+}
+
+################################
+# BinaryToCensoring()
+################################
+
+BinaryToCensoring <- function(is.uncensored) {
+  factor(is.uncensored, levels = 0:1, labels = c("censored", "uncensored"))
+}
+
+################################
 # IsUncensored()
 ################################
 

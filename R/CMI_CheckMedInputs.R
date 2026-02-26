@@ -319,7 +319,7 @@ CheckMediationInputs <- function(data, nodes, survivalOutcome, QLform, QZform, q
         stop("All Ynodes are 0, 1, or NA; the outcome is treated as binary. The 'survivalOutcome' argument must be specified if there are multiple Ynodes.")
       }
     }
-    if (!is.null(Yrange) && !is_equivalent_to(Yrange, c(0L, 1L))) {
+    if (!is.null(Yrange) && !isTRUE(all.equal(Yrange, c(0L, 1L)))) {
       stop("All Ynodes are 0, 1, or NA, but Yrange is something other than NULL or c(0, 1)")
     }
   } else {

@@ -25,7 +25,7 @@ MainCalcsMediation <- function(inputs) {
 
   #Change to Influence Curve Variance only:
   inputs$IC.variance.only <- T
-  if (!exists("est.var.iptw")) est.var.iptw <<- F
+  if (!exists("est.var.iptw")) est.var.iptw <- FALSE
 
   #Check how many final nodes
   num.final.Ynodes <- length(inputs$final.Ynodes)
@@ -107,7 +107,7 @@ MainCalcsMediation <- function(inputs) {
 
     #If user specified that variance should be estimated (non-IC), return IC with all NA
     if (isTRUE(attr(inputs$data, "called.from.estimate.variance", exact=TRUE))) {
-      return(list(IC=matrix(NA, 1, 1), msm=NULL, beta=qlogis(mean(Qstar)), cum.g=g.list$cum.g, cum.g.unbounded=g.list$cum.g.unbounded, fit=fixed.tmle$fit, variance.estimate=NULL, beta.iptw=iptw$beta, IC.iptw=iptw$IC, Qstar=Qstar))
+      return(list(IC=matrix(NA, 1, 1), msm=NULL, beta=qlogis(mean(Qstar)), cum.g=g.abar.list$cum.g, cum.g.unbounded=g.abar.list$cum.g.unbounded, fit=fixed.tmle$fit, variance.estimate=NULL, beta.iptw=iptw$beta, IC.iptw=iptw$IC, Qstar=Qstar))
     }
 
     #Returns coefficients for the MSM model and predicted values for Qstar. Used for FinalizeIC() and NormalizeIC()
@@ -135,7 +135,7 @@ MainCalcsMediation <- function(inputs) {
         }
       }
 
-      g.ratio <- CalcGUnboundedToBoundedRatio(g.list, inputs$all.nodes, inputs$final.Ynodes)
+      g.ratio <- CalcGUnboundedToBoundedRatio(g.abar.list, inputs$all.nodes, inputs$final.Ynodes)
       C <- NormalizeIC(IC, inputs$combined.summary.measures, fitted.msm$m.beta, all.msm.weights, inputs$observation.weights, g.ratio)
       variance.estimate <- safe.solve(C) %*% new.var %*% t(safe.solve(C))
 
