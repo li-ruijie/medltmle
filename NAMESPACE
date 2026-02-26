@@ -17,3 +17,8 @@ import(matrixStats)
 import(pracma)
 import(reshape)
 import(speedglm)
+importFrom(stats, as.formula, binomial, coef, cov, formula, glm,
+           model.frame, model.matrix, model.offset, na.pass, nlminb,
+           plogis, predict, qlogis, quasibinomial, rbinom, reshape,
+           rnorm, terms, var)
+importFrom(utils, capture.output, head, tail)

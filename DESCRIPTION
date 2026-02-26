@@ -17,13 +17,13 @@ Imports:
     SuperLearner,
     speedglm,
     matrixStats,
-    parallel,
     pracma,
-    reshape 
+    reshape
 Suggests:
     testthat,
     caret,
-    knitr
+    knitr,
+    Matrix
 License: MIT + file LICENSE
 URL: https://github.com/podTockom/medltmle
 BugReports: https://github.com/podTockom/medltmle/issues
