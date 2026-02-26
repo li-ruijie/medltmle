@@ -3,15 +3,6 @@
 
 # R/`medltmle`
 
-[![Travis-CI Build
-Status](https://travis-ci.org/podTockom/medltmle.svg?branch=master)](https://travis-ci.org/podTockom/medltmle)
-[![AppVeyor Build
-Status](https://ci.appveyor.com/api/projects/status/github/podTockom/medltmle?branch=master&svg=true)](https://ci.appveyor.com/project/podTockom/medltmle)
-[![Coverage
-Status](https://img.shields.io/codecov/c/github/podTockom/medltmle/master.svg)](https://codecov.io/github/podTockom/medltmle?branch=master)
-[![CRAN](http://www.r-pkg.org/badges/version/medltmle)](http://www.r-pkg.org/pkg/medltmle)
-[![CRAN
-downloads](https://cranlogs.r-pkg.org/badges/medltmle)](https://CRAN.R-project.org/package=medltmle)
 [![Project Status: WIP – Initial development is in progress, but there
 has not yet been a stable, usable release suitable for the
 public.](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip)
@@ -47,8 +38,8 @@ in order to handle more elaborate longitudinal data structures.
 
 ## Installation
 
-You can install the most recent *stable release* from GitHub via
-[`devtools`](https://www.rstudio.com/products/rpackages/devtools/) with:
+**Note:** This package is not on CRAN. Install from GitHub via
+[`devtools`](https://www.rstudio.com/products/rpackages/devtools/):
 
 ``` r
 devtools::install_github("podTockom/medltmle")
